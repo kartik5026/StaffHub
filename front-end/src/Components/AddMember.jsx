@@ -3,7 +3,7 @@ function AddMember() {
     return (
         <>
             <div className="min-w-[50vw]  mx-auto">
-                <form action="http://localhost:3000/newUser" method="post">
+                <form action="https://staffhub-o6z3.onrender.com/newUser" method="post">
                     <div>
                         <h1>Image</h1>
                         <input type="text" name="newuserImage"  placeholder="Enter Your Image URL" />
