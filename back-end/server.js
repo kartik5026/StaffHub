@@ -118,6 +118,7 @@ app.post("/login", (req, res) => {
         res.cookie('myToken', token, {
             httpOnly: true,
             sameSite:'None',
+            secure:true,
         })
         res.send("Logged In Success");
 
