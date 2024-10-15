@@ -26,7 +26,7 @@ function People() {
     }, [])
 
     async function fetchDataFromtBackEnd() {
-        const res = await axios.get("http://localhost:3000/getData",{withCredentials:true});
+        const res = await axios.get("https://staffhub-o6z3.onrender.com/getData",{withCredentials:true});
         const userData = res.data;
         const msg = userData.message;
         console.log(userData);
@@ -53,13 +53,13 @@ function People() {
 
     async function deleteUser(username){
         alert("User Deleted"+username);
-        const res = await axios.post("http://localhost:3000/delete",{username});
+        const res = await axios.post("https://staffhub-o6z3.onrender.com/delete",{username});
 
     }
 
     async function handleChange(e){
         const val = e.target.value;
-        const res = await axios.post("http://localhost:3000/search",{val});
+        const res = await axios.post("https://staffhub-o6z3.onrender.com/search",{val});
         const foundUsers =await res.data;
         console.log(foundUsers.length);
         if(foundUsers.length>0){
